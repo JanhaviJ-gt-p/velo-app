@@ -1,0 +1,20 @@
+
+#simpl website program in py
+
+pip install flask
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "<h1>Welcome to My Simple Website</h1><p>This is built with Python and Flask!</p>"
+
+@app.route('/about')
+def about():
+    return "<h1>About Page</h1><p>This is a simple about page.</p>"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+python app.py
+
